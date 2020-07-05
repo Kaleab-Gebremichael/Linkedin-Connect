@@ -6,20 +6,20 @@ browser = webdriver.Chrome()
 
 # file containing all linkedin links
 FILE_NAME = "linkedin_contacts.txt"
+CREDENTIALS = "credentials.txt"
 
 browser.get("https://www.linkedin.com/login")
 
-#username = input("Enter in your linkedin username: ")
+#username = input("Enter in your linkedin email: ")
 #password = getpass("Enter your password: ")
-file = open("credentials.txt", "r")
+file = open(CREDENTIALS, "r")
 allLines = file.readlines()
 
-username = allLines[0].strip()
+email = allLines[0].strip()
 password = allLines[1].strip()
 
-
 usernameTextbox = browser.find_element_by_id("username")
-usernameTextbox.send_keys(username)
+usernameTextbox.send_keys(email)
 
 passwordTextbox = browser.find_element_by_id("password")
 passwordTextbox.send_keys(password)
@@ -30,7 +30,6 @@ signInButton.click()
 # open file containing links
 file = open(FILE_NAME, "r")
 allLinks = file.readlines()
-link = ""   #initialize it as string to use the string methods
 
 def sendInvite(userLink):
     browser.get(userLink)
@@ -46,10 +45,9 @@ def sendInvite(userLink):
         doneKey.click()
     except NoSuchElementException:
         print("Already connected to: ", userLink)
-    
 
-for link in allLinks:
-    trimmedLink = link.strip()
-    sendInvite(trimmedLink)
-
-
+if __name__ == "__main__":
+    link = ""   #initialize it as string to use the string methods
+    for link in allLinks:
+        trimmedLink = link.strip()
+        sendInvite(trimmedLink)
