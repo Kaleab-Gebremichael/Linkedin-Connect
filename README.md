@@ -4,7 +4,7 @@ This simple python script will save you from individually clicking lots of Linke
 
 ## Instructions
 
-1. To authenticate into LinkedIn, make a text file with the name "credentials.txt" without the quotes. First line of this file should be the email address you use to login to LinkedIn. Second line of this file should be the password associated.
+1. To authenticate into LinkedIn, edit the [credentials.txt](./credentials.txt) file. First line of this file should be the email address you use to login to LinkedIn and the second line should be the password.
 ```bash
 emailaddress@host.com
 password
