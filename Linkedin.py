@@ -35,12 +35,13 @@ link = ""   #initialize it as string to use the string methods
 def sendInvite(userLink):
     browser.get(userLink)
     connectButtonXpathLink = "/html/body/div[7]/div[3]/div/div/div/div/div[2]/main/div[1]/section/div[2]/div[1]/div[2]/div/div/span[1]/div/button"
-    connectKey = browser.find_element_by_xpath(connectButtonXpathLink)
-    connectKey.click()
+    doneButtonXpathLink = "/html/body/div[4]/div/div/div[3]/button[2]"
 
     # in case we're already connected
     try:
-        doneButtonXpathLink = "/html/body/div[4]/div/div/div[3]/button[2]"
+        connectKey = browser.find_element_by_xpath(connectButtonXpathLink)
+        connectKey.click()
+        
         doneKey = browser.find_element_by_xpath(doneButtonXpathLink)
         doneKey.click()
     except NoSuchElementException:
