@@ -9,7 +9,7 @@ This simple python script will save you from individually clicking lots of Linke
 emailaddress@host.com
 password
 ```
-2. Make a text file in the same directory with the name "linkedin_contacts.txt" without the quotes. The file should be a list of LinkedIn URLs one on each line like this:
+2. Edit the [linkedin_contacts.txt](./linkedin_contacts.txt) file and add the links. The file should be a list of LinkedIn URLs one on each line like this:
 ```bash
 https://www.linkedin.com/in/kaleab-gebremichael/
 https://www.linkedin.com/in/kaleab-gebremichael/
