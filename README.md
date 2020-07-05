@@ -15,4 +15,4 @@ https://www.linkedin.com/in/kaleab-gebremichael/
 https://www.linkedin.com/in/kaleab-gebremichael/
 https://www.linkedin.com/in/kaleab-gebremichael/
 ```
-3. Run the python script, sit back and watch it do its thing
+3. Run the [python script](./Linkedin.py), sit back and watch it do its thing
